@@ -126,7 +126,7 @@ if ($row[0]/$postperpag > $_GET['pag']&&ceil($row[0]/$postperpag)!=1) {
 <center><img src="img/logo_thumb.png" /></center>
 <div id="inline">
 <span id="inline-image"><img src="img/logo_thumb.png" /></span>
-<span id="inline-text">Esta p&#225;gina est&#225; dirigida a los estudiantes de Ing. Civil en Inform&#225;tica para canalizar sus comentarios, cr&#237;ticas, disgustos y sugerencias respecto a su carrera. pero sobre todo para fomentar el debate y transformar estos argumentos en hechos reales.
+<span id="inline-text">Esta p&#225;gina est&#225; dirigida a los estudiantes de Ing. Civil en Inform&#225;tica para canalizar sus comentarios, cr&#237;ticas, disgustos y sugerencias respecto a su carrera, pero sobre todo para fomentar el debate y transformar estos argumentos en hechos reales.
 <br/><br/>Si estudias Inform&#225;tica y quieres dar tu opini&#243;n ya sea con tu nombre real o como an&#243;nimo, est&#225;s en el lugar adecuado</span>
 </div>
 <script type="text/javascript">
