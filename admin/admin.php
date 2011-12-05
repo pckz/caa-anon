@@ -10,8 +10,8 @@
   <?php
   require_once("login.php");
   $authuser = $_SESSION['authuser'];
-  include_once('simpleCMS.php');
-  $obj = new simpleCMS();
+  include_once('simpleAdmin.php');
+  $obj = new simpleAdmin();
   $obj->host = 'localhost';
   $obj->username = 'root';
   $obj->password = 'root';
@@ -26,7 +26,7 @@
   <?php
   $pagina = 1;
   if (isset($_GET['id']) ) {
-  	echo $obj->delete_id($_GET['id']); 
+  	echo "<span class='mensaje'>".$obj->delete_id($_GET['id'])."</span>"; 
   } 
 
   echo $obj->display_public();

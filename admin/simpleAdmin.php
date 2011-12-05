@@ -1,6 +1,6 @@
 <?php
 
-class simpleCMS {
+class simpleAdmin {
   var $host;
   var $username;
   var $password;
@@ -35,7 +35,7 @@ ENTRY_DISPLAY;
 
     <h2>No hay datos para desplegar</h2>
     <p>
-      No se ha encontrado ningœn comentario
+      No se ha encontrado ning&#250;n comentario
     </p>
 
 ENTRY_DISPLAY;

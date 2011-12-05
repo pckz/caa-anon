@@ -39,3 +39,9 @@ table tr td {
 	overflow:hidden;
 	white-space:nowrap;
 }
+.mensaje{
+	color:red;
+	font-size: 13px;
+	display:block;
+	margin-top:10px;
+}
