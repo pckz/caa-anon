@@ -12,8 +12,7 @@ class Comment
 		
 		$this->data = $row;
 	}
-	
-	public function markup()
+	public function markup($single=false)
 	{
 		/*
 		/	This method outputs the XHTML markup of the comment
@@ -39,8 +38,8 @@ class Comment
 		
 		// Needed for the default gravatar image:
 		$url = 'http://'.dirname($_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/img/default_avatar.gif';
-		
-		return '
+		if ($single) $ret =  '<script>document.title = "OpinaICI.org - '.$d['name'].' / '.$d['id'].'"</script>';
+		$ret .= '
 		
 			<div id="comment" class="comment">
 				<div class="avatar">
@@ -49,11 +48,12 @@ class Comment
 					'.$link_close.'
 				</div>
 				
-				<div class="name">'.$link_open.$d['name'].$link_close.'</div>
+				<div class="name"><a href="?id='.$d['id'].'">'.$link_open.$d['name'].$link_close.'</a></div>
 				<div class="date" title="Agregado el '.date('H:i \o\n d M Y',$d['dt']).'">'.date('d M Y - H:i',$d['dt']).'</div>
 				<p>'.$d['body'].'</p>
 			</div>
 		';
+		return $ret;
 	}
 	
 	public static function validate(&$arr)
@@ -88,12 +88,12 @@ class Comment
 		
 		if(!($data['body'] = filter_input(INPUT_POST,'body',FILTER_CALLBACK,array('options'=>'Comment::validate_text'))))
 		{
-			$errors['body'] = 'Ingrese un comentario.';
+			$errors['body'] = 'El comentario no existe o es muy corto.';
 		}
 		
 		if(!($data['name'] = filter_input(INPUT_POST,'name',FILTER_CALLBACK,array('options'=>'Comment::validate_text'))))
 		{
-			$errors['name'] = 'Ingrese un nombre.';
+			$errors['name'] = 'El nombre no existe o es muy corto.';
 		}
 		
 		if(!empty($errors)){
@@ -135,6 +135,7 @@ class Comment
 		// Remove the new line characters that are left
 		$str = str_replace(array(chr(10),chr(13)),'',$str);
 		
+		if (strlen($str)<5) return false;
 		return $str;
 	}
 
