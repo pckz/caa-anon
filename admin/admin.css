@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	text-align: center;
+	font-size:14px;
+	color:#666;
+	background:url('/img/bg.jpg') #f2f2f2;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body h1 {
+	margin-top: 20px;
+}
+#container {
+	width: 950px;
+	margin: 0 auto;
+}
+table {
+	margin-top: 30px;
+	border:1px solid grey;
+	table-layout:fixed;
+	width: 930px;
+}
+table tr {
+	height:1em;
+}
+table tr :first-child{
+	width:150px;
+}
+table tr :last-child{
+	width:100px;
+	text-align:center;
+}
+table tr td {
+	font-size: 12px;
+	padding-bottom: 5px;
+	overflow:hidden;
+	white-space:nowrap;
+}
