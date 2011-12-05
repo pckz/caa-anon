@@ -19,6 +19,7 @@
   $obj->connect();
   
   ?>
+  <a href="http://www.opinaici.org"><img border="0" src="/img/logo_thumb.png"/></a>
   <h1>Bienvenido, <?=$authuser;?></h1>
   <span id="logout"><a href="login.php?logout">Logout</a></span>
   

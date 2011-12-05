@@ -1,6 +1,6 @@
 <?php
 $adminuser = "admin";
-$adminpass = "password";
+$adminpass = "c44-1nf0";
 
 
 function loginpage($error) {
