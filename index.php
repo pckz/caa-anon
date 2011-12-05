@@ -20,13 +20,18 @@ $postperpag = 10;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php if (!isset($_GET['id'])) echo '<title>OpinaICI.org</title>' ; ?>
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<!--  Fancybox -->
+<link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css?v=2.0.3" type="text/css" media="screen" />
+<script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js?v=2.0.3"></script>
 </head>
 <body>
 <center>
 <a href="http://www.opinaici.org"><img border="0" src="img/banner.png"/></a>
 </center>
 <div id="info">
-<a href="?about">Qué es esto?</a>
+<a class="fancybox" href="#inline">Qu&#233; es esto?</a>
 </div>
 
 	<div id="main">
@@ -47,17 +52,6 @@ if (isset($_GET['id'])&&ctype_digit($_GET['id'])) {
 		echo '<br /><br /><br />';
 		echo $c->markup(true);
 	}
-}
-else if(isset($_GET['about'])){
-	?>
-	<br /><br />
-	<div id="comment" class="comment">
-	
-		Esta página está dirigida a los estudiantes de Ing. Civil en Informática para canalizar sus comentarios, sugerencias, entre otros, para poder formar una visión de lo que los estudiantes ven en la carrera, falencias, problemas, pero principalmente fomentar el debate, para poder transformar estos argumentos en hechos reales.
-<br /><br />
-		Si estudias Informática y quieres dar tu opinión anónimamente, estas en el lugar adecuado.
-		</div>
-	<?php
 } 
 else {
 	?>
@@ -130,8 +124,26 @@ if ($row[0]/$postperpag > $_GET['pag']&&ceil($row[0]/$postperpag)!=1) {
 <br /><br />
 </center>
 <center><img src="img/logo_thumb.png" /></center>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<div id="inline">
+<span id="inline-image"><img src="img/logo_thumb.png" /></span>
+<span id="inline-text">Esta p&#225;gina est&#225; dirigida a los estudiantes de Ing. Civil en Inform&#225;tica para canalizar sus comentarios, cr&#237;ticas, disgustos y sugerencias respecto a su carrera. pero sobre todo para fomentar el debate y transformar estos argumentos en hechos reales.
+<br/><br/>Si estudias Inform&#225;tica y quieres dar tu opini&#243;n ya sea con tu nombre real o como an&#243;nimo, est&#225;s en el lugar adecuado</span>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+			maxWidth	: 600,
+			maxHeight	: 400,
+			fitToView	: false,
+			width		: '70%',
+			height		: '70%',
+			autoSize	: true,
+			closeClick	: false,
+			openEffect	: 'fade',
+			closeEffect	: 'fade'
+		});
+	});
+</script>
 
 </body>
 </html>
