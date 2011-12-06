@@ -6,7 +6,7 @@ $adminpass = "c44-1nf0";
 function loginpage($error) {
 	echo "<html>\n<head>\n<title>Panel administracion OpinaICI</title>\n";
 	echo "</head>\n<body>\n";
-	echo "<table style='width:100%;height:100%;'>\n<tr>\n<td align='center'>\n";
+	echo "<table id='login_table'>\n<tr>\n<td align='center'>\n";
 	echo "<form action='" . $_SERVER['REQUEST_URI'] . "' method='post'>\n";
 	echo "<table border='1' width='300' cellspacing='0' cellpadding='4'><tr>\n";
 	$formtitle = "Panel administracion OpinaICI";

@@ -45,3 +45,10 @@ table tr td {
 	display:block;
 	margin-top:10px;
 }
+#login_table {
+	border:none;
+	width: 500px;
+}
+#login_table th{
+	width:400px;
+}
