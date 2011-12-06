@@ -19,10 +19,9 @@ $postperpag = 10;
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php if (!isset($_GET['id'])) echo '<title>OpinaICI.org</title>' ; ?>
-<!-- Redirect IE -->
 <!--[if IE]>
-<meta http-equiv="refresh" content="0;http://<?php echo $_SERVER['PHP_SELF']?>/ie.php"> 
-<![endif]-->  
+<meta HTTP-EQUIV="REFRESH" content="0; url="http://www.opinaici.org/ie.php">
+<![endif]-->
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
