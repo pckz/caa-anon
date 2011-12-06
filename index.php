@@ -20,7 +20,7 @@ $postperpag = 10;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php if (!isset($_GET['id'])) echo '<title>OpinaICI.org</title>' ; ?>
 <!--[if IE]>
-<meta HTTP-EQUIV="REFRESH" content="0; url="http://www.opinaici.org/ie.php">
+<meta HTTP-EQUIV="REFRESH" content="0; url=http://www.opinaici.org/ie.php">
 <![endif]-->
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" type="text/css" href="styles.css" />
