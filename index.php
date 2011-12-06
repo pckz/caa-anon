@@ -19,6 +19,7 @@ $postperpag = 10;
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php if (!isset($_GET['id'])) echo '<title>OpinaICI.org</title>' ; ?>
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
