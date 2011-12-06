@@ -114,16 +114,6 @@ display:none;
 	float:left;
 	margin: 0px  10px 0 0;
 }
-.comment_admin{
-	background-color: #F56502;
-	color: #FFFFFF;
-}
-.comment_admin .avatar {
-	display:inline;
-}
-.comment_admin a, a:visited {
-	color: #FFFFFF;
-}
 
 
 label{
@@ -235,4 +225,14 @@ a img{
 	border:1px solid #e8e7e7;
 	border-radius: 5px;
 	padding: 10px;
+}
+.comment_admin{
+	background-color: #F56502;
+	color: #FFFFFF;
+}
+.comment_admin .avatar {
+	display:inline;
+}
+.comment_admin a, a:visited {
+	color: #FFFFFF;
 }
