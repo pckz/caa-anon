@@ -26,6 +26,20 @@ $postperpag = 10;
 <!--  Fancybox -->
 <link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css?v=2.0.3" type="text/css" media="screen" />
 <script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js?v=2.0.3"></script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27524852-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 <center>
