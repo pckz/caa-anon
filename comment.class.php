@@ -3,6 +3,7 @@
 class Comment
 {
 	private $data = array();
+	public $is_admin;
 	
 	public function __construct($row)
 	{
@@ -11,8 +12,9 @@ class Comment
 		*/
 		
 		$this->data = $row;
+		$this->is_admin = $row['admin'];
 	}
-	public function markup($single=false)
+	public function markup($single=false, $admin=false)
 	{
 		/*
 		/	This method outputs the XHTML markup of the comment
@@ -28,7 +30,6 @@ class Comment
 			
 			// If the person has entered a URL when adding a comment,
 			// define opening and closing hyperlink tags
-			
 			$link_open = '<a href="'.$d['url'].'">';
 			$link_close =  '</a>';
 		}
@@ -39,20 +40,38 @@ class Comment
 		// Needed for the default gravatar image:
 		$url = 'http://'.dirname($_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/img/default_avatar.gif';
 		if ($single) $ret =  '<script>document.title = "OpinaICI.org - '.$d['name'].' / '.$d['id'].'"</script>';
-		$ret .= '
 		
-			<div id="comment" class="comment">
-				<div class="avatar">
-					'.$link_open.'
-					<img src="http://www.gravatar.com/avatar/'.md5($d['email']).'?size=50&amp;default='.urlencode($url).'" />
-					'.$link_close.'
+		if ($admin) {
+			$ret .= '
+			
+				<div id="comment" class="comment comment_admin">
+					<div class="avatar">
+						'.$link_open.'
+						<img src="img/admin.jpg" />
+						'.$link_close.'
+					</div>
+					
+					<div class="name"><a href="?id='.$d['id'].'">'.$link_open.$d['name'].$link_close.'</a></div>
+					<div class="date" title="Agregado el '.date('H:i \o\n d M Y',$d['dt']).'">'.date('d M Y - H:i',$d['dt']).'</div>
+					<p>'.$d['body'].'</p>
 				</div>
-				
-				<div class="name"><a href="?id='.$d['id'].'">'.$link_open.$d['name'].$link_close.'</a></div>
-				<div class="date" title="Agregado el '.date('H:i \o\n d M Y',$d['dt']).'">'.date('d M Y - H:i',$d['dt']).'</div>
-				<p>'.$d['body'].'</p>
-			</div>
-		';
+			';
+		} else {
+			$ret .= '
+			
+				<div id="comment" class="comment">
+					<div class="avatar">
+						'.$link_open.'
+						<img src="http://www.gravatar.com/avatar/'.md5($d['email']).'?size=50&amp;default='.urlencode($url).'" />
+						'.$link_close.'
+					</div>
+					
+					<div class="name"><a href="?id='.$d['id'].'">'.$link_open.$d['name'].$link_close.'</a></div>
+					<div class="date" title="Agregado el '.date('H:i \o\n d M Y',$d['dt']).'">'.date('d M Y - H:i',$d['dt']).'</div>
+					<p>'.$d['body'].'</p>
+				</div>
+			';
+		}
 		return $ret;
 	}
 	

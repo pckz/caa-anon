@@ -92,7 +92,9 @@ else {
 		$comments[] = new Comment($row);
 	}
 	foreach($comments as $c){
-		echo $c->markup();
+		if ($c->is_admin == '1'){
+			echo $c->markup(false, true);
+		} else echo $c->markup();
 	}
 }
 

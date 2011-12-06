@@ -110,6 +110,18 @@ display:none;
 	float:left;
 	margin: 0px  10px 0 0;
 }
+.comment_admin{
+	background-color: #F56502;
+	color: #FFFFFF;
+}
+.comment_admin .avatar {
+	display:inline;
+}
+.comment_admin a, a:visited {
+	color: #FFFFFF;
+}
+
+
 label{
 	font-size:10px;
 	height:5px;

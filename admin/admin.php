@@ -23,9 +23,16 @@
   $pagina = 1;
   if (isset($_GET['id']) ) {
   	echo "<span class='mensaje'>".$obj->delete_id($_GET['id'])."</span>"; 
-  } 
-
-  echo $obj->display_public();
+  } if (isset($_POST['submit'])){
+  	echo "<span class='mensaje'>".$obj->insert_comment($_POST['comentario'])."</span>"; ;
+  }
+  
+  echo '<span id="chuck_text">Sientete como Chuck Norris <br/>(solo para usuarios avanzados)</span>';
+  echo '<img src="../img/admin.jpg" />';
+  echo $obj->insert_comment_form();
+  
+  echo $obj->display_comments();
+  
   
 
 ?>

@@ -52,3 +52,15 @@ table tr td {
 #login_table th{
 	width:400px;
 }
+#chuck_text {
+	display:block;
+	margin-top:50px;
+	font-size:11px;
+}
+#chuck_form{
+	margin-top:10px;	
+}
+#chuck_form textarea {
+	width: 400px;
+	height: 5em;
+}
