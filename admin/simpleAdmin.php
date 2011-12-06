@@ -62,7 +62,7 @@ ENTRY_DISPLAY;
   
   public function insert_comment($comment){
   	$q = "INSERT INTO comments(name,body,admin) VALUE(";
-  	$q .= "'Chuck Norris','".$comment."',1)";
+  	$q .= "'Chuck Norris','".htmlspecialchars($comment)."',1)";
     $r = mysql_query($q);
     if ($r !== false) {
     	$response = "Comentario agregado satisfactoriamente";
