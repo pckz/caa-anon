@@ -21,7 +21,7 @@ $postperpag = 10;
 <?php if (!isset($_GET['id'])) echo '<title>OpinaICI.org</title>' ; ?>
 <!-- Redirect IE -->
 <!--[if IE]>
-<meta http-equiv="refresh" content="0;http://caa-promo/ie.php"> 
+<meta http-equiv="refresh" content="0;http://<?php echo $_SERVER['PHP_SELF']?>/ie.php"> 
 <![endif]-->  
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" type="text/css" href="styles.css" />
