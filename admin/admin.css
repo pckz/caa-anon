@@ -26,6 +26,7 @@ table {
 	width: 930px;
 }
 table tr {
+	background: #ddd;
 	height:1em;
 }
 table tr :first-child{
