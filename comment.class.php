@@ -88,12 +88,12 @@ class Comment
 		
 		if(!($data['body'] = filter_input(INPUT_POST,'body',FILTER_CALLBACK,array('options'=>'Comment::validate_text'))))
 		{
-			$errors['body'] = 'El comentario no existe o es muy corto.';
+			$errors['body'] = 'El comentario es muy corto.';
 		}
 		
 		if(!($data['name'] = filter_input(INPUT_POST,'name',FILTER_CALLBACK,array('options'=>'Comment::validate_text'))))
 		{
-			$errors['name'] = 'El nombre no existe o es muy corto.';
+			$errors['name'] = 'El nombre es muy corto.';
 		}
 		
 		if(!empty($errors)){
