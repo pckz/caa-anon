@@ -233,6 +233,6 @@ a img{
 .comment_admin .avatar {
 	display:inline;
 }
-.comment_admin a, a:visited {
+.comment_admin a, .comment_admin a:visited {
 	color: #FFFFFF;
 }
