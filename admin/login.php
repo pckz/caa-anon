@@ -1,6 +1,9 @@
 <?php
-$adminuser = "admin";
-$adminpass = "c44-1nf0";
+$q = "SELECT * FROM users";
+$r = mysql_query($q);
+$a = mysql_fetch_assoc($r);
+$adminuser = $a['user'];
+$adminpass = $a['pass'];
 
 
 function loginpage($error) {

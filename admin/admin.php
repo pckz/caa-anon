@@ -8,15 +8,11 @@
   <body>
   <div id="container">
   <?php
+  require_once("../connect.php");
   require_once("login.php");
   $authuser = $_SESSION['authuser'];
   include_once('simpleAdmin.php');
   $obj = new simpleAdmin();
-  $obj->host = 'localhost';
-  $obj->username = 'root';
-  $obj->password = 'root';
-  $obj->table = 'opinaici';
-  $obj->connect();
   
   ?>
   <a href="http://www.opinaici.org"><img border="0" src="/img/logo_thumb.png"/></a>

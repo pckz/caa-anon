@@ -1,10 +1,6 @@
 <?php
 
 class simpleAdmin {
-  var $host;
-  var $username;
-  var $password;
-  var $table;
 
   public function display_public() {
   	$q = "SELECT * FROM comments ORDER BY id DESC";
@@ -54,12 +50,6 @@ ENTRY_DISPLAY;
     	$response = "Error: No se pudo borrar el comentario";
     } 
     return $response;
-  }
-
-  public function connect() {
-  	mysql_connect($this->host,$this->username,$this->password) or die("Could not connect. " . mysql_error());
-    mysql_select_db($this->table) or die("Could not select database. " . mysql_error());
-  	
   }
 }
 
