@@ -1,5 +1,5 @@
 <?php
-$q = "SELECT * FROM users";
+$q = "SELECT * FROM users LIMIT 1";
 $r = mysql_query($q);
 $a = mysql_fetch_assoc($r);
 $adminuser = $a['user'];
